@@ -1,1 +1,1 @@
-
+Each weight file in .pt form represents the Yolov5 size variance, e.g. PL_small.pt is the model trained on Yolov5s.pt by Ultralytics. Please note that high augmentations yaml file was used to train all models.  

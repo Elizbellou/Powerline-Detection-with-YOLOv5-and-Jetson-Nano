@@ -1,5 +1,7 @@
 # Powerline-Detection
 This repo contains four YOLOv5 models in .pt form, trained on a powerline dataset with 3 object classes, i.e. towers, conductors and insulators. You can use any model as a baseline to try transfer learning on your projects related to powerline inspection tasks. 
+
+
 TABLE1. YOLOv5 performance on TESLA P100 (Colab) and YOLOv5s optimized with Tensor-RT. Input image 640X640 and NMS time per image 1-1.5ms (not included).
 | PL-models | Precision | Recall | mAP@0.5 | mAP@5:95 | fps | Size |
 |-----------|-----------|--------|---------|----------|-----|------|

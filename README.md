@@ -14,3 +14,8 @@ TABLE1. YOLOv5 performance on TESLA P100 (Colab) and YOLOv5s optimized with Tens
 | Tower     | 0.94      | 0.903  | 0.943   | 0.832    |-----|------|
 | Insulator | 0.787     | 0.909  | 0.889   | 0.634    |-----|------|
 |Conductors | 0.723     | 0.547  | 0.636   | 0.382    |-----|------|
+
+
+For detailed insights please read and cite : 
+
+Bellou, E., Pisica, I., & Banitsas, K. (2023, August). Real-time object detection on high-voltage powerlines using an Unmanned Aerial Vehicle (UAV). In 2023 58th International Universities Power Engineering Conference (UPEC) (pp. 1-6). IEEE.

@@ -15,7 +15,16 @@ TABLE1. YOLOv5 performance on TESLA P100 (Colab) and YOLOv5s optimized with Tens
 | Insulator | 0.787     | 0.909  | 0.889   | 0.634    |-----|------|
 |Conductors | 0.723     | 0.547  | 0.636   | 0.382    |-----|------|
 
+TABLE 2. YOLOv5 performance on Jetson Nano (4GB) optimized with Tensor -RT.
+| PL-models | Precision | Recall | mAP@0.5 | mAP@5:95 | fps on video inference |
+|-----------|-----------|--------|---------|----------|------------------------|
+|Yolov5s-trt| 0.811     | 0.783  | 0.821   | 0.596    | 33                     |
+| Tower     | 0.937     | 0.935  | 0.958   | 0.825    |------------------------|
+| Insulator | 0.782     | 0.89   | 0.881   | 0.599    |------------------------|
+|Conductors | 0.713     | 0.525  | 0.625   | 0.364    |------------------------|
 
 For detailed insights please read and cite : 
 
-Bellou, E., Pisica, I., & Banitsas, K. (2023, August). Real-time object detection on high-voltage powerlines using an Unmanned Aerial Vehicle (UAV). In 2023 58th International Universities Power Engineering Conference (UPEC) (pp. 1-6). IEEE.
+E. Bellou, I. Pisica and K. Banitsas, "Real-Time Object Detection on High-Voltage Powerlines Using an Unmanned Aerial Vehicle (UAV)," 2023 58th International Universities Power Engineering Conference (UPEC), Dublin, Ireland, 2023, pp. 1-6, doi: 10.1109/UPEC57427.2023.10294447.
+keywords: {Surveillance;Poles and towers;Object detection;High-voltage techniques;Inspection;Streaming media;Autonomous aerial vehicles;Unmanned Aerial Vehicles (UAVs);high-voltage powerlines;computer vision;object detection;custom dataset}
+

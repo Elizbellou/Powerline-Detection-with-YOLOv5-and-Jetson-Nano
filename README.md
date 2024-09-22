@@ -48,7 +48,7 @@ Open another terminal window
 python detect.py --path/to/weights/PL_small.engine --imgsz 640 --source 0 --classes 0 1 2 --device 0 #0 is set to use gpu memory 
 
 ```
-For detailed insights please read and cite : 
+For detailed insights on the drone hardware and yolo training parameters, environment etc. please read and cite : 
 
 E. Bellou, I. Pisica and K. Banitsas, "Real-Time Object Detection on High-Voltage Powerlines Using an Unmanned Aerial Vehicle (UAV)," 2023 58th International Universities Power Engineering Conference (UPEC), Dublin, Ireland, 2023, pp. 1-6, doi: [10.1109/UPEC57427.2023.10294447](https://ieeexplore.ieee.org/abstract/document/10294447).
 keywords: {Surveillance;Poles and towers;Object detection;High-voltage techniques;Inspection;Streaming media;Autonomous aerial vehicles;Unmanned Aerial Vehicles (UAVs);high-voltage powerlines;computer vision;object detection;custom dataset}

@@ -34,7 +34,7 @@ First connect usb port of Jetson Nano to the TELEM 2 UART port of Pixhawk and ru
 mavproxy.py --master=/dev/ttyUSB0 --baudrate=57600 --aircraft MyCopter
 
 ```
-You can check your USB Camera preview and settings following this Jetsonhacks [repo](https://github.com/jetsonhacks/USB-Camera)
+Recommended Software for ground control station is Qgroundcontrol or Mission Planner.
 ## Export our YOLOv5s model to Tensor-RT engine file on Jetson Nano
 Download our PL_small.pt from this repo and open another terminal window
 ```
@@ -51,6 +51,8 @@ Open another terminal window
 python detect.py --path/to/weights/PL_small.engine --imgsz 640 --source 0 --classes 0 1 2 --device 0 #0 is set to use gpu memory 
 
 ```
+You can check your USB Camera preview and settings following this Jetsonhacks [repo](https://github.com/jetsonhacks/USB-Camera)
+
 For detailed insights on the drone hardware and yolo training parameters, environment etc. please read and cite : 
 
 E. Bellou, I. Pisica and K. Banitsas, "Real-Time Object Detection on High-Voltage Powerlines Using an Unmanned Aerial Vehicle (UAV)," 2023 58th International Universities Power Engineering Conference (UPEC), Dublin, Ireland, 2023, pp. 1-6, doi: [10.1109/UPEC57427.2023.10294447](https://ieeexplore.ieee.org/abstract/document/10294447).

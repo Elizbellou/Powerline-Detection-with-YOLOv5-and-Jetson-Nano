@@ -40,9 +40,9 @@ Download our PL_small.pt from this repo and open another terminal window
 ```
 git clone https://github.com/ultralytics/yolov5
 cd yolov5
-pip install -r requirements.txt
+pip install -r requirements.txt coremltools onnx onnx-simplifier onnxruntime-gpu openvino-dev tensorflow  # GPU
 python export.py --path/to/weights/PL_small.pt --img 640 --device 0 --simplify --include onnx
-trtexec --onnx=yolov5s.onnx --saveEngine=PL_small.engine --explicitBatch --workspace=2048 --optShapes=input:1x3x640x640
+python export.py --path/to/weights/PL_small.onnx --img 640 --device 0 --include engine
 
 ```
 ## Run YOLO model using a USB webcam 

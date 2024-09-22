@@ -23,8 +23,9 @@ TABLE 2. YOLOv5 performance on Jetson Nano (4GB) optimized with Tensor -RT.
 | Insulator | 0.782     | 0.89   | 0.881   | 0.599    |------------------------|
 |Conductors | 0.713     | 0.525  | 0.625   | 0.364    |------------------------|
 
+Inference on drone footage using Jetson Nano dev kit can be found [here](https://youtu.be/OjKJn98CTjA)
 For detailed insights please read and cite : 
 
-E. Bellou, I. Pisica and K. Banitsas, "Real-Time Object Detection on High-Voltage Powerlines Using an Unmanned Aerial Vehicle (UAV)," 2023 58th International Universities Power Engineering Conference (UPEC), Dublin, Ireland, 2023, pp. 1-6, doi: 10.1109/UPEC57427.2023.10294447.
+E. Bellou, I. Pisica and K. Banitsas, "Real-Time Object Detection on High-Voltage Powerlines Using an Unmanned Aerial Vehicle (UAV)," 2023 58th International Universities Power Engineering Conference (UPEC), Dublin, Ireland, 2023, pp. 1-6, doi: [10.1109/UPEC57427.2023.10294447](https://ieeexplore.ieee.org/abstract/document/10294447).
 keywords: {Surveillance;Poles and towers;Object detection;High-voltage techniques;Inspection;Streaming media;Autonomous aerial vehicles;Unmanned Aerial Vehicles (UAVs);high-voltage powerlines;computer vision;object detection;custom dataset}
 

@@ -52,7 +52,7 @@ python detect.py --path/to/weights/PL_small.engine --imgsz 640 --source 0 --clas
 
 ```
 You can check your USB Camera preview and settings following this Jetsonhacks [repo](https://github.com/jetsonhacks/USB-Camera)
-
+## Publication
 For detailed insights on the drone hardware and yolo training parameters, environment etc. please read and cite : 
 
 E. Bellou, I. Pisica and K. Banitsas, "Real-Time Object Detection on High-Voltage Powerlines Using an Unmanned Aerial Vehicle (UAV)," 2023 58th International Universities Power Engineering Conference (UPEC), Dublin, Ireland, 2023, pp. 1-6, doi: [10.1109/UPEC57427.2023.10294447](https://ieeexplore.ieee.org/abstract/document/10294447).

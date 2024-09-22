@@ -34,7 +34,7 @@ First connect usb port of Jetson Nano to the TELEM 2 UART port of Pixhawk and ru
 mavproxy.py --master=/dev/ttyUSB0 --baudrate=57600 --aircraft MyCopter
 
 ```
-You can check your USB Camera preview and settings following this [repo](https://github.com/jetsonhacks/USB-Camera)
+You can check your USB Camera preview and settings following this Jetsonhacks [repo](https://github.com/jetsonhacks/USB-Camera)
 ## Export our YOLOv5s model to Tensor-RT engine file on Jetson Nano
 Download our PL_small.pt from this repo and open another terminal window
 ```

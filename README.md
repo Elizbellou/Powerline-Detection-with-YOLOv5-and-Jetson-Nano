@@ -29,7 +29,23 @@ Inference on drone footage using Jetson Nano dev kit can be found [here](https:/
 ## Connect Pixhawk 4 with Jetson Nano
 First connect usb port of Jetson Nano to the TELEM 2 UART port of Pixhawk and run the following command (note that you may need to change USB0, baudrate number and Aircraft name acording to your project:
 ```
-"mavproxy.py --master=/dev/ttyUSB0 --baudrate=57600 --aircraft MyCopter"
+mavproxy.py --master=/dev/ttyUSB0 --baudrate=57600 --aircraft MyCopter
+
+```
+## Export our YOLOv5s model to Tensor-RT engine file on Jetson Nano
+Download our yolov5s.pt from this repo and open another terminal window
+```
+git clone https://github.com/ultralytics/yolov5
+cd yolov5
+pip install -r requirements.txt
+python export.py --path/to/weights/yolov5s.pt --img 640 --device 0 --simplify --include onnx
+trtexec --onnx=yolov5s.onnx --saveEngine=yolov5s.engine --explicitBatch --workspace=2048 --optShapes=input:1x3x640x640
+
+```
+## Run YOLO model using a USB webcam 
+Open another terminal window
+```
+python detect.py --data data.yaml --path/to/weights/yourmodel.engine --imgsz 640 --source 0  --device 0 #0 is set to use gpu memory 
 
 ```
 For detailed insights please read and cite : 

@@ -1,7 +1,7 @@
 # Powerline-Detection
 This repo contains four YOLOv5 models in .pt form, trained on a powerline dataset with 3 object classes, i.e. towers, conductors and insulators. You can use any model as a baseline to try transfer learning on your projects related to powerline inspection tasks. 
-A detailed guide on how to reproduce this YOLO project is available in README file [here](https://github.com/Elizbellou/Tower-Insulator-Conductors-TIC-Dataset-and-Object-Detection-Models)
-where you can also download the full imagedataset with annotations (bbox and polygons).
+A detailed guide on how to train-validate your own YOLO models is available in README file [here](https://github.com/Elizbellou/Tower-Insulator-Conductors-TIC-Dataset-and-Object-Detection-Models)
+where you can also download the full image dataset to use with annotations (bbox and polygons).
 
 
 TABLE1. YOLOv5 performance on TESLA P100 (Colab) and YOLOv5s optimized with Tensor-RT. Input image 640X640 and NMS time per image 1-1.5ms (not included).
@@ -33,19 +33,19 @@ mavproxy.py --master=/dev/ttyUSB0 --baudrate=57600 --aircraft MyCopter
 
 ```
 ## Export our YOLOv5s model to Tensor-RT engine file on Jetson Nano
-Download our yolov5s.pt from this repo and open another terminal window
+Download our PL_small.pt from this repo and open another terminal window
 ```
 git clone https://github.com/ultralytics/yolov5
 cd yolov5
 pip install -r requirements.txt
-python export.py --path/to/weights/yolov5s.pt --img 640 --device 0 --simplify --include onnx
-trtexec --onnx=yolov5s.onnx --saveEngine=yolov5s.engine --explicitBatch --workspace=2048 --optShapes=input:1x3x640x640
+python export.py --path/to/weights/PL_small.pt --img 640 --device 0 --simplify --include onnx
+trtexec --onnx=yolov5s.onnx --saveEngine=PL_small.engine --explicitBatch --workspace=2048 --optShapes=input:1x3x640x640
 
 ```
 ## Run YOLO model using a USB webcam 
 Open another terminal window
 ```
-python detect.py --data data.yaml --path/to/weights/yourmodel.engine --imgsz 640 --source 0  --device 0 #0 is set to use gpu memory 
+python detect.py --path/to/weights/PL_small.engine --imgsz 640 --source 0 --classes 0 1 2 --device 0 #0 is set to use gpu memory 
 
 ```
 For detailed insights please read and cite : 

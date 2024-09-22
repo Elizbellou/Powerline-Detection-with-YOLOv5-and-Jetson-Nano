@@ -1,5 +1,7 @@
 # Powerline-Detection
 This repo contains four YOLOv5 models in .pt form, trained on a powerline dataset with 3 object classes, i.e. towers, conductors and insulators. You can use any model as a baseline to try transfer learning on your projects related to powerline inspection tasks. 
+A detailed guide on how to reproduce this project is available in README file [here](https://github.com/Elizbellou/Tower-Insulator-Conductors-TIC-Dataset-and-Object-Detection-Models)
+where you can also download the full imagedataset with annotations (bbox and polygons).
 
 
 TABLE1. YOLOv5 performance on TESLA P100 (Colab) and YOLOv5s optimized with Tensor-RT. Input image 640X640 and NMS time per image 1-1.5ms (not included).
@@ -24,6 +26,7 @@ TABLE 2. YOLOv5 performance on Jetson Nano (4GB) optimized with Tensor -RT.
 |Conductors | 0.713     | 0.525  | 0.625   | 0.364    |------------------------|
 
 Inference on drone footage using Jetson Nano dev kit can be found [here](https://youtu.be/OjKJn98CTjA)
+
 For detailed insights please read and cite : 
 
 E. Bellou, I. Pisica and K. Banitsas, "Real-Time Object Detection on High-Voltage Powerlines Using an Unmanned Aerial Vehicle (UAV)," 2023 58th International Universities Power Engineering Conference (UPEC), Dublin, Ireland, 2023, pp. 1-6, doi: [10.1109/UPEC57427.2023.10294447](https://ieeexplore.ieee.org/abstract/document/10294447).

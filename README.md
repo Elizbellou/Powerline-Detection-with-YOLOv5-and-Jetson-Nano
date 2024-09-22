@@ -3,7 +3,7 @@ This repo contains four YOLOv5 models in .pt form, trained on an original powerl
 A detailed guide on how to train-validate your own YOLO models is available in README file [here](https://github.com/Elizbellou/Tower-Insulator-Conductors-TIC-Dataset-and-Object-Detection-Models)
 where you can also download our full image dataset to use with annotations (bbox and polygons).
 
-
+# Performance of our YOLOv5 -based models
 TABLE1. YOLOv5 performance on TESLA P100 (Colab) and YOLOv5s optimized with Tensor-RT. Input image 640X640 and NMS time per image 1-1.5ms (not included).
 | PL-models | Precision | Recall | mAP@0.5 | mAP@5:95 | fps | Size |
 |-----------|-----------|--------|---------|----------|-----|------|

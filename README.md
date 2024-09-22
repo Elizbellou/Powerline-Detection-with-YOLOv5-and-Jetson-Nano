@@ -25,7 +25,9 @@ TABLE 2. YOLOv5 performance on Jetson Nano (4GB) optimized with Tensor -RT.
 | Insulator | 0.782     | 0.89   | 0.881   | 0.599    |------------------------|
 |Conductors | 0.713     | 0.525  | 0.625   | 0.364    |------------------------|
 
+# Inference on video with Jetson Nano
 Inference on drone footage using Jetson Nano dev kit can be found [here](https://youtu.be/OjKJn98CTjA)
+# Impementation
 ## Connect Pixhawk 4 with Jetson Nano
 First connect usb port of Jetson Nano to the TELEM 2 UART port of Pixhawk and run the following command (note that you may need to change USB0, baudrate number and Aircraft name acording to your project:
 ```

@@ -28,14 +28,18 @@ TABLE 2. YOLOv5 performance on Jetson Nano (4GB) optimized with Tensor -RT.
 # Inference on video with Jetson Nano
 Inference on drone footage using Jetson Nano dev kit can be found [here](https://youtu.be/OjKJn98CTjA)
 # Impementation
+## Get started with Jetson Nano 
+Before proceeding please follow the tutorial videos of [Get started with Jetson Nano Developer Kit](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit) to understand connections and headless mode function and also increase swap file memory.
+
 ## Connect Pixhawk 4 with Jetson Nano
-First connect usb port of Jetson Nano to the TELEM 2 UART port of Pixhawk and run the following command (note that you may need to define USB* or use /dev/ttyACM*, baudrate number and aircraft name, according to your project):
+First connect usb port of Jetson Nano to the TELEM 2 UART port or micro-USB of Pixhawk and run the following command (note that you may need to define /dev/ttyUSB* or /dev/ttyACM*, baudrate number and aircraft name, according to your project):
 ```
+pip install MAVProxy pyserial pymavlink
 mavproxy.py --master=/dev/ttyUSB* --baudrate=115200 --aircraft MyCopter
 
 ```
 Recommended Software for ground control station is Qgroundcontrol or Mission Planner.
-## Export our YOLOv5s model to Tensor-RT engine file on Jetson Nano
+## Export our YOLOv5s model to Tensor-RT engine file on the Jetson Nano
 Download our PL_small.pt from this repo and open another terminal window
 ```
 git clone https://github.com/ultralytics/yolov5
@@ -52,6 +56,27 @@ python detect.py --path/to/weights/PL_small.engine --imgsz 640 --source 0 --clas
 
 ```
 You can check your USB Camera preview and settings following this Jetsonhacks [repo](https://github.com/jetsonhacks/USB-Camera)
+
+## Ultralytics Docker
+
+To use ultralytics yolo new releases with Jetson Nano Jetpack 4.X versions, please run the pre-build image docker developers provide [here](https://docs.ultralytics.com/guides/nvidia-jetson/#quick-start-with-docker) and follow the above steps inside the docker container.
+
+```
+t=ultralytics/ultralytics:latest-jetson-jetpack4
+sudo docker pull $t && sudo docker run -it --ipc=host --runtime=nvidia $t
+
+```
+When complete exit the docker and run the following command to give access to X server (this is to have a preview camera window when detections run inside the docker):
+```
+xhost +local:root 
+
+```
+Now enter the docker using access flags to your camera and files:
+```
+sudo docker run -it --ipc=host --runtime=nvidia --gpus all --device /dev/video0:/dev/video0 --privileged  -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v  /path/to/yourPL_small.pt:/ultralytics/yourPL_small.pt ultralytics/ultralytics:latest-jetson-jetpack4
+
+```
+
 ## Publication
 For detailed insights on the drone hardware and yolo training parameters, environment etc. please read and cite : 
 

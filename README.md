@@ -29,9 +29,9 @@ TABLE 2. YOLOv5 performance on Jetson Nano (4GB) optimized with Tensor -RT.
 Inference on drone footage using Jetson Nano dev kit can be found [here](https://youtu.be/OjKJn98CTjA)
 # Impementation
 ## Connect Pixhawk 4 with Jetson Nano
-First connect usb port of Jetson Nano to the TELEM 2 UART port of Pixhawk and run the following command (note that you may need to change USB0, baudrate number and aircraft name, according to your project):
+First connect usb port of Jetson Nano to the TELEM 2 UART port of Pixhawk and run the following command (note that you may need to define USB* or use /dev/ttyACM*, baudrate number and aircraft name, according to your project):
 ```
-mavproxy.py --master=/dev/ttyUSB0 --baudrate=57600 --aircraft MyCopter
+mavproxy.py --master=/dev/ttyUSB* --baudrate=115200 --aircraft MyCopter
 
 ```
 Recommended Software for ground control station is Qgroundcontrol or Mission Planner.
